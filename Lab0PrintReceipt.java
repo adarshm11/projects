@@ -59,74 +59,74 @@ public class Lab0PrintReceipt {
 		int qtyTR = scan1.nextInt();				// Read # of Tape Recorders bought
 
 		System.out.printf("%n"); // Create some white space between the list of items and the totals.
-
+		
 		// Declare variables to hold the total price of each type of item, and set each of their
 		// values to be the product of the quantity and unit price of that type of item.
-		/*
-		double tpTV		= _______________	// Total price for TVs
-		double tpVCR	= _______________	// Total price for VCRs
-		double tpRC		= _______________	// Total price for Remote Controllers
-		double tpCDP	= _______________	// Total price for CD Players
-		double tpTR		= _______________	// Total price for Tape Recorders
-		*/
+		
+		double tpTV = qtyTV * UP_TV;	// Total price for TVs
+		double tpVCR = qtyVCR * UP_VCR;	// Total price for VCRs
+		double tpRC	= qtyRC * UP_RC;	// Total price for Remote Controllers
+		double tpCDP = qtyCDP * UP_CDP;	// Total price for CD Players
+		double tpTR	= qtyTR * UP_TR;	// Total price for Tape Recorders
+		
 
 		// Print the header, showing the quantity of items bought, description, unit price, and total price
-		/*
-		System.out.printf();
-		*/
+		
+		//System.out.printf();
+		
 
 		// Print a line below the header so that it contains "=" and " " (empty space) below each
 		// character in the header line.
-		/*
-		System.out.printf();
-		*/
+		
+		//System.out.printf();
+		
 		
 		// Print the quantity, description, unit price, and total price for each type of item purchased
-		/*
-		System.out.printf(); // TVs
-		System.out.printf(); // VCRs
-		System.out.printf(); // Remote Controllers
-		System.out.printf(); // CD Players
-		System.out.printf(); // Tape Recorders
-		*/
+		
+		//System.out.printf(); // TVs
+		//System.out.printf(); // VCRs
+		//System.out.printf(); // Remote Controllers
+		//System.out.printf(); // CD Players
+		//System.out.printf(); // Tape Recorders
+		
 
 		//System.out.printf(); // Create some white space between the list of items and the totals.
 
 		// Declare a variable to hold the sub total amount, and set its value to be
 		// the sum of the total prices of all the items bought.
-		/*
-		double subTotal = _________________________________;
-		*/
+		
+		double subTotal = tpTV + tpVCR + tpRC + tpCDP + tpTR;
+		
 
 		// Print the sub total.
-		/*
-		System.out.printf();
-		*/
+		
+		//System.out.printf();
+		
 		
 		// Declare a variable to hold the tax incurred, and set its value to be
 		// the product of the sub total and the tax rate (in decimal).
-		/*
-		double tax = _____________________;
-		*/
+		
+		double tax = subTotal * TAX_RATE;
+		
 
 		// Print the tax on the sub total (also inform the customer about the tax rate percent).
-		/*
-		System.out.printf();
-		*/
+		
+		//System.out.printf();
+		
 
 		// ALTERNATE PRINT STATEMENT WITHOUT SHOWING THE TAX RATE PERCENT -- commented out
-		// System.out.printf();
+		//System.out.printf();
 
 		// Declare a variable to hold the total amount after tax,
 		// and set its value to be the sum of the sub total and the tax.
-		/*
-		double total = ___________________;
-		*/		
+		
+		double total = subTotal + tax;
+				
 		
 		// Print the total amount
-		/*
-		System.out.printf();
-		*/
+		
+		//System.out.printf();
+		
 	}
 	
 }
@@ -155,3 +155,4 @@ Enter # of Tape Recorders bought: 1
 							          TOTAL		       3,270.45
 
 */
+

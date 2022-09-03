@@ -59,7 +59,6 @@ public class Lab0PrintReceipt {
 		int qtyTR = scan1.nextInt();				// Read # of Tape Recorders bought
 
 		System.out.printf("%n"); // Create some white space between the list of items and the totals.
-		
 		// Declare variables to hold the total price of each type of item, and set each of their
 		// values to be the product of the quantity and unit price of that type of item.
 		

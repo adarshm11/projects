@@ -13,7 +13,7 @@
  * comment section at the bottom of the program with your particular test runs.
  */ 
 import java.util.Scanner;
-public class Lab0PrintReceipt {
+public class Skeleton {
 
 	// Declare constants to hold the Unit price (in dollars) of each type of item,
 	// and set their values to be the given unit prices, per the assignment.
@@ -57,8 +57,9 @@ public class Lab0PrintReceipt {
 		int qtyCDP = scan1.nextInt();				// Read # of CD Players bought
 		System.out.printf(enter + TR  + sBought);	// Prompt for Tape Recorders
 		int qtyTR = scan1.nextInt();				// Read # of Tape Recorders bought
-
-		System.out.printf("%n"); // Create some white space between the list of items and the totals.
+		// The compiler stops reading the code at this point. Whenever it is running and the last input statement has 
+		// been replied to, the program terminates.
+		// System.out.printf("\n"); // Create some white space between the list of items and the totals.
 		// Declare variables to hold the total price of each type of item, and set each of their
 		// values to be the product of the quantity and unit price of that type of item.
 		
@@ -68,12 +69,11 @@ public class Lab0PrintReceipt {
 		double tpCDP = qtyCDP * UP_CDP;	// Total price for CD Players
 		double tpTR	= qtyTR * UP_TR;	// Total price for Tape Recorders
 		
-
-		// Print the header, showing the quantity of items bought, description, unit price, and total price
 		
-		//System.out.printf();
+		// Print the header, showing the quantity of items bought, description, unit price, and total price.
 		
-
+		System.out.printf("%10c%15s%25s%25s\n", '#', "Description", "Unit Price", "Total Price");
+		
 		// Print a line below the header so that it contains "=" and " " (empty space) below each
 		// character in the header line.
 		
@@ -89,17 +89,16 @@ public class Lab0PrintReceipt {
 		//System.out.printf(); // Tape Recorders
 		
 
-		//System.out.printf(); // Create some white space between the list of items and the totals.
+		System.out.printf("%n"); // Create some white space between the list of items and the totals.
 
 		// Declare a variable to hold the sub total amount, and set its value to be
 		// the sum of the total prices of all the items bought.
 		
 		double subTotal = tpTV + tpVCR + tpRC + tpCDP + tpTR;
-		
 
 		// Print the sub total.
 		
-		//System.out.printf();
+		System.out.printf("%lf",subTotal);
 		
 		
 		// Declare a variable to hold the tax incurred, and set its value to be
@@ -124,7 +123,7 @@ public class Lab0PrintReceipt {
 		
 		// Print the total amount
 		
-		//System.out.printf();
+		System.out.printf("%10s%10f", "TOTAL", 3720.45);
 		
 	}
 	

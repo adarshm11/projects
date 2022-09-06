@@ -13,7 +13,7 @@
  * comment section at the bottom of the program with your particular test runs.
  */ 
 import java.util.Scanner;
-public class Skeleton {
+public class Lab0PrintReceipt {
 
 	// Declare constants to hold the Unit price (in dollars) of each type of item,
 	// and set their values to be the given unit prices, per the assignment.
@@ -57,9 +57,8 @@ public class Skeleton {
 		int qtyCDP = scan1.nextInt();				// Read # of CD Players bought
 		System.out.printf(enter + TR  + sBought);	// Prompt for Tape Recorders
 		int qtyTR = scan1.nextInt();				// Read # of Tape Recorders bought
-		// The compiler stops reading the code at this point. Whenever it is running and the last input statement has 
-		// been replied to, the program terminates.
-		// System.out.printf("\n"); // Create some white space between the list of items and the totals.
+		
+		System.out.printf("\n"); // Create some white space between the list of items and the totals.
 		// Declare variables to hold the total price of each type of item, and set each of their
 		// values to be the product of the quantity and unit price of that type of item.
 		
@@ -72,21 +71,21 @@ public class Skeleton {
 		
 		// Print the header, showing the quantity of items bought, description, unit price, and total price.
 		
-		System.out.printf("%10c%15s%25s%25s\n", '#', "Description", "Unit Price", "Total Price");
-		
+		System.out.printf("%6c%13s%40s%20s%n", '#', "Description", "Unit Price", "Total Price");
+
 		// Print a line below the header so that it contains "=" and " " (empty space) below each
 		// character in the header line.
 		
-		//System.out.printf();
+		System.out.printf("%6s%13s%40s%20s%n", "==", "===========", "==========", "===========");
 		
 		
 		// Print the quantity, description, unit price, and total price for each type of item purchased
 		
-		//System.out.printf(); // TVs
-		//System.out.printf(); // VCRs
-		//System.out.printf(); // Remote Controllers
-		//System.out.printf(); // CD Players
-		//System.out.printf(); // Tape Recorders
+		System.out.printf("%6d%4s%49.2f%,20.2f%n", qtyTV, TV, UP_TV, tpTV); // TVs
+		System.out.printf("%6d%5s%48.2f%,20.2f%n", qtyVCR, VCR, UP_VCR, tpVCR); // VCRs
+		System.out.printf("%6d%19s%34.2f%,20.2f%n", qtyRC, RC, UP_RC, tpRC); // Remote Controllers
+		System.out.printf("%6d%11s%42.2f%,20.2f%n", qtyCDP, CDP, UP_CDP, tpCDP); // CD Players
+		System.out.printf("%6d%15s%38.2f%,20.2f%n", qtyTR, TR, UP_TR, tpTR); // Tape Recorders
 		
 
 		System.out.printf("%n"); // Create some white space between the list of items and the totals.
@@ -98,7 +97,7 @@ public class Skeleton {
 
 		// Print the sub total.
 		
-		System.out.printf("%lf",subTotal);
+		System.out.printf("%43s%,20.2f%n","SUBTOTAL", subTotal);
 		
 		
 		// Declare a variable to hold the tax incurred, and set its value to be
@@ -113,7 +112,7 @@ public class Skeleton {
 		
 
 		// ALTERNATE PRINT STATEMENT WITHOUT SHOWING THE TAX RATE PERCENT -- commented out
-		//System.out.printf();
+		System.out.printf("%43s%20.2f%n", "TAX", tax);
 
 		// Declare a variable to hold the total amount after tax,
 		// and set its value to be the sum of the sub total and the tax.
@@ -123,34 +122,54 @@ public class Skeleton {
 		
 		// Print the total amount
 		
-		System.out.printf("%10s%10f", "TOTAL", 3720.45);
+		System.out.printf("%43s%,20.2f", "TOTAL", total);
 		
 	}
-	
 }
+
 
 /*
 
 TEST RUN #1
 ===========
-Enter # of TVs bought: 2
-Enter # of VCRs bought: 3
-Enter # of Remote Controllers bought: 6
-Enter # of CD Players bought: 4
-Enter # of Tape Recorders bought: 1
+Enter # of TVs bought: 4
+Enter # of VCRs bought: 2
+Enter # of Remote Controllers bought: 3
+Enter # of CD Players bought: 5
+Enter # of Tape Recorders bought: 2
 
-	 #	Description                   		     Unit Price		    Total Price
-	==	===========                   		     ==========		    ===========
-	 2	TV                            		         400.00		         800.00
-	 3	VCR                           		         220.00		         660.00
-	 6	Remote Controller             		          35.20		         211.20
-	 4	CD Player                     		         300.00		       1,200.00
-	 1	Tape Recorder                 		         150.00		         150.00
+     #  Description                              Unit Price         Total Price
+    ==  ===========                              ==========         ===========
+     4  TV                                           400.00            1,600.00
+     2  VCR                                          220.00              440.00
+     3  Remote Controller                             35.20              105.60
+     5  CD Player                                    300.00            1,500.00
+     2  Tape Recorder                                150.00              300.00
 
-							       SUBTOTAL		       3,021.20
-							    TAX @ 8.25%		         249.25
-							            TAX		         249.25
-							          TOTAL		       3,270.45
+                                   SUBTOTAL            3,945.60
+                                        TAX              325.51
+                                      TOTAL            4,271.11
 
+TEST RUN #2
+===========
+Enter # of TVs bought: 10
+Enter # of VCRs bought: 12
+Enter # of Remote Controllers bought: 9
+Enter # of CD Players bought: 13
+Enter # of Tape Recorders bought: 20
+
+     #  Description                              Unit Price         Total Price
+    ==  ===========                              ==========         ===========
+    10  TV                                           400.00            4,000.00
+    12  VCR                                          220.00            2,640.00
+     9  Remote Controller                             35.20              316.80
+    13  CD Player                                    300.00            3,900.00
+    20  Tape Recorder                                150.00            3,000.00
+
+                                   SUBTOTAL           13,856.80
+                                        TAX             1143.19
+                                      TOTAL           14,999.99
 */
+
+	
 
